@@ -1,0 +1,339 @@
+/* 基础变量 */
+:root {
+    --primary-color: #2997ff;
+    --secondary-color: #0071e3;
+    --gradient-start: #2997ff;
+    --gradient-end: #0071e3;
+    --section-spacing: 6rem;
+    --button-primary: #000000;
+    --button-hover: #333333;
+    --button-secondary: rgba(0, 0, 0, 0.1);
+    --button-text: #ffffff;
+    --button-text-dark: #000000;
+}
+
+/* 主视觉区域 */
+.hero-section {
+    min-height: 100vh;
+    padding: 120px 2rem 4rem;
+    background: var(--background-primary);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    padding-right: 2rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(41, 151, 255, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.hero-text h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.secondary-btn {
+    background: var(--background-secondary);
+    color: var(--primary-color);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* 服务介绍区域 */
+.services-section {
+    padding: var(--section-spacing) 2rem;
+    background: var(--background-secondary);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.section-subtitle {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(41, 151, 255, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+}
+
+.services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+/* 技术栈区域 */
+.tech-section {
+    padding: var(--section-spacing) 2rem;
+    background: var(--background-primary);
+}
+
+.tech-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+}
+
+.tech-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-background);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover i {
+    transform: scale(1.1);
+}
+
+/* 可以为不同图标设置不同颜色 */
+.tech-card .fa-html5 { color: #e34f26; }
+.tech-card .fa-css3-alt { color: #1572b6; }
+.tech-card .fa-js { color: #f7df1e; }
+.tech-card .fa-react { color: #61dafb; }
+.tech-card .fa-vuejs { color: #42b883; }
+.tech-card .fa-node-js { color: #339933; }
+.tech-card .fa-python { color: #3776ab; }
+.tech-card .fa-php { color: #777bb4; }
+.tech-card .fa-git-alt { color: #f05032; }
+
+/* 项目流程区域 */
+.process-section {
+    padding: var(--section-spacing) 2rem;
+    background: var(--background-secondary);
+}
+
+.process-timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+/* 联系我们区域 */
+.contact-section {
+    padding: var(--section-spacing) 2rem;
+    background: var(--background-primary);
+}
+
+.contact-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-background);
+    border-radius: 16px;
+    padding: 4rem;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.2rem 3rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 968px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        padding-right: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .process-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 100px 1rem 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .contact-card {
+        padding: 2rem;
+    }
+} 

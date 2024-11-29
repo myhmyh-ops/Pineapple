@@ -1,0 +1,276 @@
+/* 联系页面样式 */
+.contact-section {
+    min-height: 100vh;
+    padding: 120px 2rem 2rem;
+    background: var(--background-primary);
+    display: flex;
+    align-items: center;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    background: var(--card-background);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 左侧联系信息样式 */
+.contact-info {
+    position: relative;
+}
+
+.contact-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    position: relative;
+    display: inline-block;
+}
+
+.contact-info h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, var(--accent-color), #06c);
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+}
+
+.contact-info h1:hover::after {
+    transform: scaleX(1.05);
+}
+
+.info-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.email-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--background-primary);
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.email-box:hover {
+    transform: translateY(-5px);
+}
+
+.email-icon {
+    font-size: 2rem;
+}
+
+.email-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.email-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.email-content a:hover {
+    color: #06c;
+}
+
+/* 装饰元素 */
+.contact-decoration {
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    right: -50px;
+    height: 200px;
+    overflow: hidden;
+    opacity: 0.1;
+}
+
+.decoration-element {
+    position: absolute;
+    background: var(--accent-color);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.decoration-element:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    left: 10%;
+    top: 20%;
+}
+
+.decoration-element:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+}
+
+.decoration-element:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    top: 30%;
+}
+
+/* 右侧表单样式 */
+.message-form {
+    background: var(--background-primary);
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+}
+
+.form-header h2 {
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: var(--text-secondary);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--card-background);
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* 主要按钮样式（适用于所有页面） */
+.primary-btn,
+.cta-button,
+.booking-btn,
+.commission-btn,
+.contact-btn,
+.submit-btn {
+    background: var(--button-primary);
+    color: var(--button-text);
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+}
+
+/* 主要按钮悬停效果 */
+.primary-btn:hover,
+.cta-button:hover,
+.booking-btn:hover,
+.commission-btn:hover,
+.contact-btn:hover,
+.submit-btn:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* 次要按钮样式 */
+.secondary-btn,
+.service-link {
+    background: var(--button-secondary);
+    color: var(--button-text-dark);
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* 次要按钮悬停效果 */
+.secondary-btn:hover,
+.service-link:hover {
+    background: rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* 箭头样式 */
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+/* 按钮内箭头的悬停效果 */
+.primary-btn:hover .arrow,
+.cta-button:hover .arrow,
+.booking-btn:hover .arrow,
+.commission-btn:hover .arrow,
+.contact-btn:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 968px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .contact-info h1 {
+        font-size: 2rem;
+    }
+
+    .contact-decoration {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-section {
+        padding: 100px 1rem 1rem;
+    }
+
+    .contact-container {
+        padding: 1.5rem;
+    }
+
+    .email-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+} 
